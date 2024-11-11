@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook P4-M10</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 95%; margin: auto; }
+        .dropdown { margin-bottom: 20px; }
+        .time-title { font-size: 1.2em; font-weight: bold; }
+        .activity { margin-bottom: 30px; }
+        .banner { background-color: #4CAF50; color: white; padding: 10px; cursor: pointer; }
+        .title { font-weight: bold; }
+        .subtitle { font-style: italic; }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook P4-M10</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="40">40 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_mision')">
+        <div class="title">📚 Actividad 0: Revisión de Misión</div>
+        <div class="subtitle">Preparación de recursos para la misión.</div>
+    </div>
+    <div id="revision_mision" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1:</strong> Proyectar Diapositiva 1 y revisar que estén disponibles y funcionales: Magic Boards, BBC Micro, Cutebot, y material adicional (manuales, cables de carga).</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> No se requiere diálogo para esta fase; es una revisión interna del maestro antes de comenzar la clase con los estudiantes.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('saludo_ritual')">
+        <div class="title">🎉 Actividad 1: Saludo y Ritual Gnius Club</div>
+        <div class="subtitle">Bienvenida y presentación del tema.</div>
+    </div>
+    <div id="saludo_ritual" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 2 ("Gnius Club").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Buenos días, Genios! 🌟 Hoy tenemos una misión emocionante. Vamos a aprender cómo programar movimientos avanzados en nuestro Cutebot. ¿Están listos para descubrir los secretos de la programación de maniobras complejas?"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Proyectar Diapositiva 3 ("¿Cómo están?") con las nuevas posiciones para expresar el estado de ánimo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Antes de comenzar, quiero saber cómo están hoy. Si están listos para la misión, aplaudan una vez fuerte. Si necesitan un poco más de energía, agiten las manos como si estuvieran despertando. ¡Así sabré cómo está nuestro equipo de genios!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (0.5 minutos):</strong> Proyectar Diapositiva 4 ("Gracias por Asistir") y guiar a los estudiantes en el ritual.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Juntemos nuestras manos en agradecimiento por la oportunidad de aprender algo nuevo hoy. ¡Gracias por estar aquí, Genios! Hoy será un gran día para descubrir, aprender, y divertirnos juntos."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (0.5 minutos):</strong> Proyectar Diapositiva 5 ("Objetivos de la Misión") y leer los objetivos en voz alta.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Hoy tenemos tres objetivos importantes: 1. Aprender a programar maniobras complejas en el Cutebot. 2. Comprender cómo usar los bloques de tiempo para realizar maniobras precisas. 3. Practicar el paper programming para preparar nuestra próxima misión práctica. ¡Será un día lleno de aprendizaje!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('innovacion_dia')">
+        <div class="title">💡 Actividad 2: Innovación del Día</div>
+        <div class="subtitle">Exploración de tecnologías avanzadas y su aplicación.</div>
+    </div>
+    <div id="innovacion_dia" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 6 ("Innovación del Día").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Hoy vamos a conocer una tecnología avanzada que nos ayudará a entender el poder de la programación en el mundo real. Les presento el Tesla Autopilot. Este sistema permite que los autos realicen maniobras avanzadas de forma autónoma, ¡como cambiar de carril o girar suavemente! ¿Les gustaría ver cómo funciona?"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Proyectar Diapositiva 7 y reproducir el video de 1 minuto mostrando las capacidades del Autopilot.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Miren atentamente cómo el Tesla realiza maniobras complejas sin que el conductor tenga que tocar el volante! Después del video, compartan sus ideas sobre cómo esta tecnología podría cambiar nuestra forma de movernos."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (1.5 minutos):</strong> Guiar a los estudiantes en una breve reflexión sobre el video.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¿Qué les pareció? ¿De qué otra manera creen que esta tecnología podría ayudarnos en el futuro? ¿Cuál creen que es el mayor reto o limitación del Autopilot? ¡Compartamos ideas!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('brain_gym')">
+        <div class="title">🧠 Actividad 3: Brain Gym</div>
+        <div class="subtitle">Ejercicio de programación en el Cutebot.</div>
+    </div>
+    <div id="brain_gym" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Proyectar Diapositiva 8 ("Introducción a Maniobras Complejas").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios, hoy vamos a profundizar en cómo programar movimientos avanzados! Piensen en el Cutebot como un auto que necesita maniobrar con precisión en un estacionamiento. Si lo mueven demasiado rápido o giran demasiado fuerte, puede salirse del camino o perder el control. Por eso, hoy aprenderemos a ajustar cada movimiento como si estuviéramos en una pista de carreras de precisión. ¡Y recuerden, en algún lugar de esta actividad hay un Easter Egg escondido! ¡Manténganse atentos!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Proyectar Diapositiva 9 ("Bloques de Velocidad de las Ruedas") y detallar el uso del bloque "establecer velocidad de la rueda izquierda (%) y de la rueda derecha (%)".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Para hacer que el Cutebot avance, usamos el bloque establecer velocidad de la rueda izquierda (%) y de la rueda derecha (%). Imaginen que cada rueda del Cutebot tiene su propio pedal de aceleración. Podemos decirle al Cutebot cuánta potencia queremos en cada rueda. Si ponemos ambos valores iguales, como 80% en cada rueda, el Cutebot avanzará en línea recta. Pero si ponemos un valor diferente en cada rueda, por ejemplo, 80% en la izquierda y 50% en la derecha, el Cutebot girará suavemente hacia la derecha, porque una rueda va más rápido que la otra. Es como si giráramos un poco el volante en un auto para hacer una curva suave."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (2 minutos):</strong> Proyectar Diapositiva 10 ("Mantener Acción con Pausa ms").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Para que el Cutebot mantenga su velocidad durante un tiempo, usamos el bloque pausa ms. Este bloque funciona como un cronómetro que mantiene la acción que le indicamos antes. Si decimos ‘establecer velocidad de la rueda izquierda en 80% y de la rueda derecha en 50%’, el Cutebot empezará a avanzar en curva. Luego, al poner una pausa de 2000 ms, el Cutebot mantendrá esa curva durante 2 segundos antes de hacer otra acción. Así podemos controlar cuánto tiempo dura cada maniobra, como si dijéramos 'mantén esa dirección durante 2 segundos’."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (2 minutos):</strong> Proyectar Diapositiva 11 ("Detener el Cutebot").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Si necesitamos que el Cutebot se detenga de inmediato, podemos usar el bloque detener el coche inmediatamente. Esto funciona como el freno de emergencia en un auto: el Cutebot deja de moverse en cuanto lo activamos. Es útil cuando necesitamos que se detenga en un punto exacto después de completar un movimiento."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 5 (2 minutos):</strong> Proyectar Diapositiva 12 ("Establecer Color en los Faros").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Nuestro Cutebot también tiene luces en sus faros que podemos controlar! Con el bloque establecer (color) en los faros (rgb: izquierda o derecha), podemos elegir el color que queremos en cada faro. Por ejemplo, si programamos un faro rojo en el lado izquierdo y verde en el lado derecho, es como si dijéramos que un lado está girando o el otro avanzando. Piensen en los faros como señales que el Cutebot usa para indicar direcciones o estados. En 1898 se presentó el primer automóvil con faros eléctricos: el Columbia Electric Car, que usaba energía para iluminar el camino, ¡igual que nuestro Cutebot!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 6 (2 minutos):</strong> Proyectar Diapositiva 13 ("Apagar Faros LED").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Si queremos que el Cutebot apague todas sus luces, usamos el bloque apagar todos los faros led. Es como si el auto apagara todas sus señales al detenerse o al finalizar una maniobra. Esto es útil para indicar que ha terminado una acción o para ahorrar energía."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 7 (1 minuto):</strong> Proyectar Diapositiva 14 ("Revisión de Objetivos") y repasar los puntos cubiertos en la clase hasta ahora.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Gran trabajo, Genios! Hasta ahora, hemos aprendido a usar los bloques de movimiento para ajustar la velocidad de cada rueda y hacer curvas, además de cómo detener el Cutebot y usar los faros para comunicar o señalar maniobras. Hemos logrado mucho en el camino hacia la programación de maniobras complejas. ¡Ya estamos listos para más!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('brain_vitamin')">
+        <div class="title">💪 Actividad 4: Brain Vitamin</div>
+        <div class="subtitle">Ejercicio de recarga de energía y secuenciación.</div>
+    </div>
+    <div id="brain_vitamin" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 15 ("Brain Vitamin - Activación Energética").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios, antes de continuar con nuestra programación avanzada, vamos a recargar energía! Esta pequeña actividad física nos ayudará a despertar el cuerpo y la mente. ¡Vamos a movernos!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Proyectar Diapositiva 16 ("Gimnasia Cerebral para Secuencias").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Vamos a hacer un ejercicio especial para preparar nuestro cerebro para la secuencia de programación. Toquen su mano derecha con la rodilla izquierda, luego cambien y toquen su mano izquierda con la rodilla derecha. Repitan varias veces, aumentando la velocidad. Esto ayuda a nuestros cerebros a coordinarse y a pensar en secuencias, ¡igual que cuando programamos!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (0.5 minutos):</strong> Proyectar Diapositiva 17 ("Ejercicio de Respiración - Concentración").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Ahora, tómense un momento para respirar profundamente. Inhalen contando hasta cuatro, retengan el aire por un segundo y luego exhalen lentamente. Esto es como un reset para nuestra mente, ¡ayudándonos a concentrarnos y prepararnos para el reto que viene!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (0.5 minutos):</strong> Sin diapositiva</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Excelente! Ahora que estamos llenos de energía y listos para concentrarnos, avancemos al siguiente reto de programación. ¡Respiren profundo y prepárense para poner en práctica todo lo que hemos aprendido!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('team_gnius')">
+        <div class="title">🤝 Actividad 5: Team Gnius</div>
+        <div class="subtitle">Formación de equipos y colaboración.</div>
+    </div>
+    <div id="team_gnius" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 18 ("Team Gnius").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios, para el siguiente reto, trabajaremos en equipos! Cada equipo se encargará de crear secuencias de programación en papel, preparándonos para las maniobras que programaremos en el Cutebot. ¡Encuentren a sus compañeros de equipo!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Proyectar Diapositiva 19 ("Organización de Equipos").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Cada equipo estará compuesto por tres integrantes: un planificador de secuencias, un dibujante y un revisor. Trabajarán juntos para crear la secuencia de movimientos en papel, como verdaderos ingenieros."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (1 minuto):</strong> Proyectar Diapositiva 20 ("Tiempo de Organización de Equipos").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Tienen un minuto para organizarse en sus equipos, asignar los roles y prepararse para el desafío de paper programming. ¡Recuerden que cada rol es importante para el éxito de la misión!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Proyectar Diapositiva 21 ("Recolectar Materiales").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Un integrante de cada equipo pasará al frente a recoger los materiales: Magic Boards y lápices. Tienen un minuto para recoger todo y regresar a sus asientos."</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('challenge')">
+        <div class="title">🚀 Actividad 6: Challenge</div>
+        <div class="subtitle">Desafío de Paper Programming y Cutebot.</div>
+    </div>
+    <div id="challenge" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Proyectar Diapositiva 22 ("Challenge de Paper Programming").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios! Es hora de poner en práctica todo lo que aprendimos sobre maniobras complejas. Su misión será planear en papel los movimientos para el Cutebot. Tienen tres retos: un círculo, la figura OS, y la figura OS8. ¡Veamos cómo pueden preparar a su Cutebot para cada misión!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Proyectar Diapositiva 23 ("Reto Rookie - Círculo").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Para el primer reto, su equipo deberá planear una secuencia que haga que el Cutebot trace un círculo. Esto significa que deben ajustar las velocidades de las ruedas para que una vaya más rápido que la otra, logrando que el Cutebot avance en un camino curvado continuo. Piensen en cómo pueden lograr que la curva se mantenga de forma constante.
+
+Para el segundo reto, llamado Master, planearán una secuencia para que el Cutebot dibuje una O y una S. Esto es un poco más complejo porque requiere que piensen en cómo programar un círculo seguido de un cambio de dirección para la S. Cada letra requiere una maniobra diferente, ¡así que trabajen juntos en cómo coordinar estos movimientos!
+
+Finalmente, en el reto Hacker, su misión es que el Cutebot trace las letras 'OS8' en secuencia. Esto es un desafío avanzado porque incluye una figura en ocho. Para ello, deberán pensar en cómo ajustar las pausas, velocidades y direcciones para que el Cutebot complete cada sección. ¡Es hora de poner a prueba su lógica de programación!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (15 minutos):</strong> Proyectar Diapositiva 24 ("Tiempo para Programar en Papel").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Manos a la obra, Genios! Tienen 15 minutos para diseñar la secuencia de bloques que creen que harán posible cada reto en su Magic Board. Recuerden usar los bloques de velocidad, pausa y detención. Cada paso debe estar claro para que luego podamos programarlo en el Cutebot."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Proyectar Diapositiva 25 ("Revisión del Challenge").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Gran trabajo, Genios! Ahora, revisemos las secuencias que crearon. ¿Qué pasos encontraron más difíciles y cómo lograron resolverlos? ¿Alguien quiere compartir alguna observación sobre cómo mejorar los movimientos?"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('easter_egg')">
+        <div class="title">🥚 Actividad 7: Easter Egg</div>
+        <div class="subtitle">Desafío sorpresa para Mon-e extra.</div>
+    </div>
+    <div id="easter_egg" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 26 ("¡Easter Egg!").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios, es momento de revelar el Easter Egg de nuestra clase! Espero que hayan estado atentos a los detalles porque tenemos una pregunta sorpresa sobre algo especial que vimos hoy."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Proyectar Diapositiva 27 ("Pregunta del Easter Egg").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "La pregunta es: ¿En qué año se presentó el primer automóvil con faros eléctricos? Recuerden, levanten la mano si saben la respuesta. No digan la respuesta en voz alta, solo levanten la mano. Elegiré a los primeros tres que levanten la mano para que me lo digan al oído."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (1 minuto):</strong> Proyectar Diapositiva 28 ("Respuesta Correcta").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Excelente! La respuesta correcta es 1898. Ese año, se presentó el Columbia Electric Car, que fue el primer coche con faros eléctricos, algo que en su momento fue toda una innovación en iluminación y tecnología. Felicidades a quienes respondieron bien. ¡Se han ganado Mon-e por su atención y memoria!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Sin diapositiva.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Increíble participación, Genios! Recuerden, cada misión puede tener sorpresas escondidas, así que siempre manténganse atentos y listos para aprender algo nuevo e inesperado. ¡Gracias por su entusiasmo!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('honor_dojo')">
+        <div class="title">🏅 Actividad 8: Honor de Dojo</div>
+        <div class="subtitle">Reflexión y cierre de la sesión.</div>
+    </div>
+    <div id="honor_dojo" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Proyectar Diapositiva 29 ("Logros del Día").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios, excelente trabajo hoy! Logramos grandes cosas juntos: aprendimos a controlar el Cutebot con precisión, a programar maniobras complejas y hasta descubrimos un Easter Egg. ¡Todo gracias a su esfuerzo y trabajo en equipo!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Sin diapositiva.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Gracias por su dedicación, Genios. Hoy no solo aprendimos sobre programación, también trabajamos juntos como un equipo, compartiendo ideas y superando retos. ¡Estoy muy orgulloso de cada uno de ustedes!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (3 minutos):</strong> Proyectar Diapositiva 30 ("Recoger Materiales").</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Ahora es momento de honrar nuestro espacio de trabajo. Por favor, recojan todos los materiales: Magic Boards, Micro y Cutebots. Asegúrense de dejar todo en orden, como buenos ingenieros."</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    </div> <!-- Cierre del container -->
+    
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Ajustes de visibilidad de actividades según el tiempo seleccionado
+            document.getElementById("activity-4").style.display = (time === "50") ? "block" : "none";
+            document.getElementById("activity-2").style.display = (time === "50" || time === "45") ? "block" : "none";
+        }
+
+        // Inicializar el contenido según la selección por defecto
+        updateContent();
+    </script>
+</body>
+</html>
